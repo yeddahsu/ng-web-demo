@@ -1,7 +1,6 @@
-kind: pipeline
-steps:
-- name: test
-  image: node
-  commands:
-  - npm install
-  - npm test
+pipeline:
+  build:
+    image: node:8.11.3-alpine
+    commands:
+      - npm install
+      - npm test
