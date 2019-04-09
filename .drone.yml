@@ -3,7 +3,8 @@ pipeline:
     image: node:8.11.3-alpine
     commands:
       - cd demo01
-      - npm install
+      - npm run-script build
+      - tar czvf dist.tar dist
 
   slack:
     image: plugins/slack
